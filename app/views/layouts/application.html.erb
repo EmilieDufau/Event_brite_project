@@ -9,8 +9,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
 
-    <ul class="navbar-nav">
+  <body>
+
+<ul class="navbar-nav">
                   <% if user_signed_in? %>
                     <li class="nav-item dropdown">
                       <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -36,9 +39,7 @@
                     </li>
                   <% end %>
                 </ul>
-  </head>
-
-  <body>
+    
     <%= yield %>
   </body>
 </html>
