@@ -14,6 +14,7 @@ class User < ApplicationRecord
   has_many :events, through: :attendances
   has_many :events, foreign_key: 'author_id', class_name: 'Event'
 
+=begin
   validates :email,
             uniqueness: true,
             format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: 'Veuillez saisir une adresse email au format valide' },
@@ -35,4 +36,5 @@ class User < ApplicationRecord
   validates :last_name,
             presence: true,
             length: { in: 2..30 }
+=end
 end
